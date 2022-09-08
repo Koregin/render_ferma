@@ -3,8 +3,7 @@ package ru.koregin.fermabackend.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Data
 @Entity
@@ -18,10 +17,10 @@ public class Task {
     private Long userId;
     private String name;
     private Status status;
-    private LocalDateTime created;
-    private LocalDateTime completed;
+    private ZonedDateTime created;
+    private ZonedDateTime completed;
 
     public enum Status {
-        RENDERING, COMPLETE
+        RENDERING, COMPLETED
     }
 }
